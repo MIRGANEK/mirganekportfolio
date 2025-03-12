@@ -1,4 +1,6 @@
-/* Ustawienia dla całego dokumentu */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* Ustawienia globalne */
 html, body {
   width: 100%;
   height: 100%;
@@ -14,208 +16,226 @@ html, body {
 }
 
 /* Podstawowe style */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
 body {
-    text-align: center;
-    overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Motywy */
+/* Motywy – teraz zamiast gradientu używamy jednolitego tła, a efekt deszczu dodajemy osobno */
 body.dark-theme {
-    background: linear-gradient(to right, #0d0d0d, #1a1a1a);
-    color: #e0e0e0;
+  background: #121212;  /* ciemniejsze tło */
+  color: #e0e0e0;
 }
 body.light-theme {
-    background: linear-gradient(to right, #e0f7fa, #b2ebf2);
-    color: #333;
+  background: #f7f7f7;  /* jasne, czyste tło */
+  color: #333;
 }
 
 /* Efekt glassmorphism dla sekcji */
 section {
-    margin: 40px auto;
-    width: 90%;
-    max-width: 800px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    border: 1px solid rgba(66, 165, 245, 0.3);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s, background 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 800px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(66, 165, 245, 0.3);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s, background 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
 }
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 section:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 /* Nagłówki sekcji z gradientowym tekstem i podkreśleniem */
 section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    background: linear-gradient(90deg, #42a5f5, #64b5f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: 2px solid rgba(66, 165, 245, 0.6);
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  background: linear-gradient(90deg, #42a5f5, #64b5f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid rgba(66, 165, 245, 0.6);
 }
 
 /* Listy i elementy list */
 section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 section li {
-    margin: 10px 0;
-    font-size: 18px;
+  margin: 10px 0;
+  font-size: 18px;
 }
 
 /* Linki z efektem hover */
 a {
-    color: #42a5f5;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s, transform 0.2s;
+  color: #42a5f5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
 }
 a:hover {
-    color: #64b5f6;
-    text-decoration: underline;
-    transform: scale(1.1);
+  color: #64b5f6;
+  text-decoration: underline;
+  transform: scale(1.1);
 }
 
 /* Stylizacja sekcji Social Media */
 .socials {
-    padding: 30px 25px;
+  padding: 30px 25px;
 }
 .socials .social-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 .socials .social-list li {
-    background: rgba(66, 165, 245, 0.15);
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: background 0.3s, transform 0.2s;
+  background: rgba(66, 165, 245, 0.15);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.2s;
 }
 .socials .social-list li:hover {
-    background: rgba(66, 165, 245, 0.3);
-    transform: scale(1.05);
+  background: rgba(66, 165, 245, 0.3);
+  transform: scale(1.05);
 }
 .socials .social-list a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
 }
 .socials .social-list a:hover {
-    color: #64b5f6;
-    transform: scale(1.1);
+  color: #64b5f6;
+  transform: scale(1.1);
 }
 .socials .social-list i {
-    font-size: 24px;
-    color: #42a5f5;
-    transition: color 0.3s;
+  font-size: 24px;
+  color: #42a5f5;
+  transition: color 0.3s;
 }
 .socials .social-list li:hover i {
-    color: #64b5f6;
+  color: #64b5f6;
 }
 
 /* Animowany baner z kryształowym efektem */
 .banner {
-    background: rgba(20, 40, 80, 0.6);
-    backdrop-filter: blur(8px);
-    padding: 50px 20px;
-    text-transform: uppercase;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    color: #42a5f5;
-    text-shadow: 0 0 15px rgba(66,165,245,0.7);
-    animation: neonGlow 1.5s infinite alternate;
+  background: rgba(20, 40, 80, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 50px 20px;
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #42a5f5;
+  text-shadow: 0 0 15px rgba(66,165,245,0.7);
+  animation: neonGlow 1.5s infinite alternate;
 }
 .banner::after {
-    content: 'mirganek';
-    display: block;
-    font-size: 18px;
-    font-weight: 400;
-    color: #a0cfff;
-    margin-top: 10px;
+  content: 'mirganek';
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #a0cfff;
+  margin-top: 10px;
 }
 @keyframes neonGlow {
-    0% { text-shadow: 0 0 10px rgba(66,165,245,0.7); }
-    100% { text-shadow: 0 0 20px rgba(66,165,245,1); }
+  0% { text-shadow: 0 0 10px rgba(66,165,245,0.7); }
+  100% { text-shadow: 0 0 20px rgba(66,165,245,1); }
 }
 
 /* Przełącznik trybu dzien/noć */
 .theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #42a5f5;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1100;
-    transition: background 0.3s, transform 0.3s;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #42a5f5;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background 0.3s, transform 0.3s;
 }
 .theme-toggle:hover {
-    background: #64b5f6;
-    transform: scale(1.05);
+  background: #64b5f6;
+  transform: scale(1.05);
 }
 
 /* Przycisk Scroll to Top – okrągły, z niebieskim tłem i szarą strzałką */
 #scrollTopBtn {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background: #42a5f5;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1100;
-    display: none;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #42a5f5;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1100;
+  display: none;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 #scrollTopBtn i {
-    font-size: 24px;
-    color: #ccc;
+  font-size: 24px;
+  color: #ccc;
 }
 #scrollTopBtn:hover {
-    background: #64b5f6;
-    transform: scale(1.1);
+  background: #64b5f6;
+  transform: scale(1.1);
 }
 
 /* Responsywność */
 @media (max-width: 600px) {
-    section {
-        width: 95%;
-        padding: 20px;
-    }
-    .banner {
-        font-size: 32px;
-    }
+  section {
+    width: 95%;
+    padding: 20px;
+  }
+  .banner {
+    font-size: 32px;
+  }
+
+  /* Efekt deszczu */
+.rain {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 1px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
 }
