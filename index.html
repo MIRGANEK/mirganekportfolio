@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="StyleSheet1.css">
+  <!-- Font Awesome dla ikon (uproszczony link) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+  <!-- Przełącznik trybu dzien/noć -->
+  <button class="theme-toggle" id="themeToggle">Jasny Tryb</button>
+  
+  <!-- Animowany Baner -->
+  <header class="banner">
+      Moje Portfolio
+  </header>
+  
+  <!-- Sekcja Social Media -->
+  <section class="socials">
+      <h2>Moje Social Media</h2>
+      <ul class="social-list">
+          <li>
+              <a href="#">
+                  <i class="fab fa-discord"></i>
+                  <span>mirghanito</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.youtube.com/@Mirghanito" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span>YouTube</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.tiktok.com/@mirghanito" target="_blank">
+                  <i class="fab fa-tiktok"></i>
+                  <span>TikTok</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://www.faceit.com/pl/players/MIRGANEK" target="_blank">
+                  <i class="fas fa-gamepad"></i>
+                  <span>Faceit</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://steamcommunity.com/id/Rownygoscmirghanito/" target="_blank">
+                  <i class="fab fa-steam"></i>
+                  <span>Steam</span>
+              </a>
+          </li>
+      </ul>
+  </section>
+  
+  <!-- Sekcja Partnerzy -->
+  <section class="partners">
+      <h2>Partnerzy</h2>
+      <ul>
+          <li>Brak Partnerów</li>
+          <li>Brak Partnerów</li>
+          <li>Brak Partnerów</li>
+      </ul>
+  </section>
+  
+  <!-- Sekcja Sprzęt -->
+  <section class="hardware">
+      <h2>Mój Sprzęt</h2>
+      <h3>🖥 Komputer</h3>
+      <ul>
+          <li><strong>Procesor:</strong> AMD Ryzen 5 2600 SIX-CORE Processor</li>
+          <li><strong>Płyta główna:</strong> B450 AORUS ELITE</li>
+          <li><strong>Karta graficzna:</strong> NVIDIA GeForce RTX 2060 SUPER</li>
+          <li><strong>Dyski:</strong> CT1000P5PSSD8, SPCC Solid State Disk</li>
+      </ul>
+      <h3>⌨ Peryferia</h3>
+      <ul>
+          <li><strong>Monitor:</strong> PL2530H</li>
+          <li><strong>Klawiatura:</strong> Redragon K630RGB-1 (czerwone switche)</li>
+          <li><strong>Mysz:</strong> SteelSeries Prime Mini WL GAMING MOUSE</li>
+      </ul>
+      <h3>🎧 Audio</h3>
+      <ul>
+          <li><strong>Słuchawki:</strong> AirPods 1</li>
+          <li><strong>Mikrofon:</strong> LCS_USB_Audio</li>
+      </ul>
+  </section>
+  
+  <!-- Sekcja Kontakt -->
+  <section class="contact">
+      <h2>Kontakt</h2>
+      <p>Chcesz nawiązać współpracę? Napisz do mnie:</p>
+      <p><a href="mailto:mirganekbiz@gmail.com">mirganekbiz@gmail.com</a></p>
+  </section>
+  
+  <!-- Przycisk Scroll to Top -->
+  <button id="scrollTopBtn" title="Do góry">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Skrypt do przełączania trybu i Scroll to Top -->
+  <script>
+    // Przełącznik trybu dzien/noć
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      body.classList.toggle('dark-theme');
+      themeToggle.textContent = body.classList.contains('light-theme') ? 'Ciemny Tryb' : 'Jasny Tryb';
+    });
+    
+    // Przycisk Scroll to Top
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollTopBtn.style.display = 'block';
+      } else {
+        scrollTopBtn.style.display = 'none';
+      }
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  
+</body>
+</html>
