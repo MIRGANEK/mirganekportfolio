@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="dark-theme">
+  <!-- Kontener efektu deszczu -->
+  <div class="rain"></div>
+
   <!-- Przełącznik trybu dzien/noć -->
   <button class="theme-toggle" id="themeToggle">Jasny Tryb</button>
   
@@ -99,9 +102,9 @@
     <i class="fas fa-arrow-up"></i>
   </button>
   
-  <!-- Skrypt do przełączania trybu i Scroll to Top -->
+  <!-- Skrypty -->
   <script>
-    // Przełącznik trybu dzien/noc
+    // Przełącznik trybu dzien/noć
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     themeToggle.addEventListener('click', () => {
@@ -121,6 +124,20 @@
     });
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Efekt deszczu
+    document.addEventListener("DOMContentLoaded", function() {
+      const rainContainer = document.querySelector('.rain');
+      const dropsCount = 50; // ilość kropli
+      for (let i = 0; i < dropsCount; i++) {
+        const drop = document.createElement('div');
+        drop.className = 'drop';
+        drop.style.left = Math.random() * 100 + '%';
+        drop.style.animationDelay = Math.random() * 2 + 's';
+        drop.style.animationDuration = (0.5 + Math.random() * 1.5) + 's';
+        rainContainer.appendChild(drop);
+      }
     });
   </script>
   
