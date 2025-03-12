@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-/* Podstawowe style i reset */
+/* Podstawowe style */
 body {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* Motywy: ciemny i jasny */
+/* Motywy */
 body.dark-theme {
     background: linear-gradient(to right, #0d0d0d, #1a1a1a);
     color: #e0e0e0;
@@ -25,7 +25,7 @@ section {
     width: 90%;
     max-width: 800px;
     padding: 25px;
-    background: rgba(255, 255, 255, 0.1); /* półprzezroczyste tło */
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     border: 1px solid rgba(66, 165, 245, 0.3);
@@ -35,8 +35,6 @@ section {
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
 }
-
-/* Animacja pojawiania się sekcji */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -63,7 +61,7 @@ section h2 {
     border-bottom: 2px solid rgba(66, 165, 245, 0.6);
 }
 
-/* Style list i elementów list */
+/* Listy i elementy list */
 section ul {
     list-style: none;
     padding: 0;
@@ -74,7 +72,7 @@ section li {
     font-size: 18px;
 }
 
-/* Stylizacja linków z efektem hover */
+/* Linki z efektem hover */
 a {
     color: #42a5f5;
     text-decoration: none;
@@ -87,7 +85,7 @@ a:hover {
     transform: scale(1.1);
 }
 
-/* Sekcja Social Media - nowoczesny wygląd z ikonami */
+/* Stylizacja sekcji Social Media */
 .socials {
     padding: 30px 25px;
 }
@@ -198,7 +196,7 @@ a:hover {
     transform: scale(1.1);
 }
 
-/* Responsywność - dostosowanie sekcji dla mniejszych ekranów */
+/* Responsywność */
 @media (max-width: 600px) {
     section {
         width: 95%;
